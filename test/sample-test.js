@@ -17,3 +17,12 @@ describe("Greeter", function () {
     expect(await greeter.greet()).to.equal("Hola, mundo!");
   });
 });
+describe("Token", function () {
+  it("Deployment should asign the total number of tokens to the owner", async function () {
+    const [owner] = await ethers.getSigners();
+    const Token = await ethers.getContractFactory("Token");
+    const hardhatToken = await Token.deploy();
+    const ownerBalance = await hardhatToken.balanceOf(owner.address);
+    expect(await hardhatToken.totalSupply()).to.equal(ownerBalance)
+  })
+})
