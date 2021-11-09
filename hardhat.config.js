@@ -16,6 +16,18 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
+
 module.exports = {
-  solidity: "0.8.4",
+  solidity: '0.8.0',
+  networks: {
+    rinkeby: {
+      url: 'https://eth-rinkeby.alchemyapi.io/v2/fj59rOj15dPcwoLw5yCBD-y0C1a_HipX',
+      accounts: ['3d5992b9f3ba8398e32681317bbb6b7702ba6c74642a418175531a53f6473908'],
+    },
+  },
 };
+// Compilation finished successfully
+// Deploying contracts with account:  0xf7F8DCf8962872421373FF5cf2C4bB06357b7133
+// Account balance:  13849749997497919120
+// WavePortal address:  0x54980E075d3BC506E67F106FED9f317b67D159dC
+// 0x54980E075d3BC506E67F106FED9f317b67D159dC

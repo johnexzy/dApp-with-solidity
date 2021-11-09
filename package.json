@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider hardhat test"
-
+    "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider hardhat test",
+    "deploy": "cross-env NODE_OPTIONS=--openssl-legacy-provider npx hardhat run scripts/deploy.js --network rinkeby"
   },
   "keywords": [],
   "author": "",
