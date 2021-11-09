@@ -22,12 +22,13 @@ module.exports = {
   solidity: '0.8.0',
   networks: {
     rinkeby: {
-      url: process.env.rinkeby,
-      accounts: [process.env.private],
+      url: process.env.STAGING_ALCHEMY_KEY,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    mainnet: {
+      chainId: 1,
+      url: process.env.PROD_ALCHEMY_KEY,
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
 };
-// Compilation finished successfully
-// WavePortal address:  0x378f773326C1Fca621dE7f20955eCA1a1a68092e
-// Deploying contracts with account:  0xf7F8DCf8962872421373FF5cf2C4bB06357b7133
-// Account balance:  32584268482307632636
